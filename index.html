@@ -3,117 +3,240 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>市場效率假說分析報告</title>
-  <!-- 引入現代無襯線字體與 Tailwind CSS CDN 快速美化 -->
+  <title>市場效率假說專題分析報告</title>
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Noto Sans TC -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Noto Sans TC', sans-serif;
     }
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-indigo-100 selection:text-indigo-900">
 
   <!-- 頂部導覽列 -->
-  <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-      <span class="text-xs font-semibold tracking-widest text-indigo-600 uppercase bg-indigo-50 px-3 py-1 rounded-full">財務金融學專題報告</span>
-      <span class="text-xs text-slate-400">市場效率假說 (EMH)</span>
+  <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="text-sm font-bold text-slate-900 tracking-tight">財務會計理論報告</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-xs font-semibold px-2.5 py-1 bg-indigo-50 text-indigo-700 rounded-full border border-indigo-200">
+          EMH Analysis
+        </span>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- 主內容區 -->
-  <main class="flex-grow max-w-5xl mx-auto px-6 py-12 w-full space-y-16">
-    
-    <!-- 報告主標題區 -->
-    <div class="text-center space-y-4 max-w-2xl mx-auto">
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">市場效率上的不同</h1>
-      <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
-        探討不同資訊透明度與市場效率型態下，證券價格如何即時反映市場資訊。
+  <!-- 主要內容區 -->
+  <main class="flex-grow max-w-6xl mx-auto px-6 py-12 w-full space-y-16">
+
+    <!-- 主視覺 Header -->
+    <header class="text-center space-y-4 max-w-3xl mx-auto">
+      <p class="text-xs uppercase tracking-widest font-bold text-indigo-600">Financial Markets & Pricing Behavior</p>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        市場效率
+      </h1>
+      <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+        解析公開資訊流通、內部隱藏資訊與證券定價機制的互動關係，以及有效市場的核心思辨。
       </p>
-    </div>
+    </header>
 
-    <!-- 區塊 1：資訊流通公開透明與價格反映 -->
-    <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-8 sm:p-10 transition hover:shadow-md">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <!-- 文字說明 -->
-        <div class="space-y-4">
-          <div class="inline-flex items-center gap-2 text-indigo-600 font-semibold text-sm">
-            <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
-            核心前題與理性市場
-          </div>
-          <h2 class="text-2xl font-bold text-slate-900">資訊流通公開透明</h2>
-          <p class="text-slate-600 leading-relaxed text-base">
-            在「資訊流通公開透明」且「投資人保持理性」的假定條件下，市場將具備極高的定價效率。任何新浮現的消息皆能迅速傳導，使證券價格能夠完全且正確地反映所有已知與公開的市場資訊。
-          </p>
+    <!-- 一、市場效率上的不同（資訊流通與理性定價） -->
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 sm:p-10 space-y-8">
+      <div class="flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-600 text-white font-bold text-sm">01</span>
+        <h2 class="text-2xl font-bold text-slate-900">資訊流通公開透明與價格形成</h2>
+      </div>
+
+      <!-- 文字論述 -->
+      <div class="bg-slate-50 border-l-4 border-indigo-600 p-5 rounded-r-xl">
+        <p class="text-slate-700 leading-relaxed text-base">
+          在<strong class="text-indigo-900 font-semibold">「資訊流通公開透明」</strong>且<strong class="text-indigo-900 font-semibold">「投資人皆保持理性」</strong>的假定情境下，市場具備高度的定價與吸收效率：任何新發布的公開資訊皆會立即且無偏差地被證券市場吸收，使<strong>證券價格能夠迅速反映所有公開資訊</strong>。
+        </p>
+      </div>
+
+      <!-- 資訊傳導圖解 (SVG Visualization) -->
+      <div class="bg-gradient-to-br from-indigo-50/50 via-white to-slate-50 rounded-xl p-6 border border-slate-200">
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-6 text-center">
+          圖 1.1：資訊傳導與證券價格反應機制示意圖
         </div>
 
-        <!-- 視覺示意圖／佔位區 -->
-        <div class="relative bg-slate-100 rounded-xl border-2 border-dashed border-slate-300 p-8 flex flex-col items-center justify-center text-center gap-3 min-h-[220px]">
-          <div class="w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xl font-bold">
-            💡
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative items-center">
+          <!-- 步驟 1 -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs text-center space-y-3">
+            <div class="w-12 h-12 mx-auto rounded-full bg-blue-100 text-blue-600 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <div class="font-bold text-slate-800">資訊流通公開透明</div>
+            <p class="text-xs text-slate-500 leading-relaxed">財報、總經指標與公告無延遲普及傳播，消弭資訊傳遞斷層。</p>
           </div>
-          <div>
-            <p class="text-sm font-semibold text-slate-700">圖片展示區：資訊透明與理性定價</p>
-            <p class="text-xs text-slate-400 mt-1">「資訊流通公開透明」示意圖</p>
+
+          <!-- 步驟 2 -->
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs text-center space-y-3">
+            <div class="w-12 h-12 mx-auto rounded-full bg-amber-100 text-amber-600 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+            </div>
+            <div class="font-bold text-slate-800">理性投資人參與</div>
+            <p class="text-xs text-slate-500 leading-relaxed">市場參與者能迅速做出一致客觀的估值判斷，避免情緒性定價扭曲。</p>
+          </div>
+
+          <!-- 步驟 3 -->
+          <div class="bg-white p-6 rounded-xl border-2 border-emerald-500/30 shadow-xs text-center space-y-3">
+            <div class="w-12 h-12 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            </div>
+            <div class="font-bold text-slate-800">即時反映所有公開資訊</div>
+            <p class="text-xs text-slate-500 leading-relaxed">股價精準對齊公開面價值，單憑公開分析無法取得非正常超額利潤。</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 區塊 2：公司內部資訊 vs 一般公開資訊 (效率型態對比) -->
+    <!-- 二、「公司內部資訊」vs「一般公開資訊」 -->
     <section class="space-y-6">
-      <div class="border-l-4 border-indigo-600 pl-4">
-        <h2 class="text-xl sm:text-2xl font-bold text-slate-900">市場效率型態比較</h2>
-        <p class="text-sm text-slate-500 mt-1">「公司內部資訊」 vs 「一般公開資訊」</p>
+      <div class="flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-600 text-white font-bold text-sm">02</span>
+        <h2 class="text-2xl font-bold text-slate-900">「公司內部資訊」vs「一般公開資訊」型態比較</h2>
       </div>
 
-      <!-- 對比卡片 -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- 對比兩大效率型態卡片 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <!-- 卡片 A: Semi-strong form -->
-        <div class="bg-white rounded-2xl p-7 border border-slate-200/80 shadow-sm flex flex-col justify-between space-y-6 relative overflow-hidden">
-          <div class="space-y-3">
-            <div class="text-xs font-semibold text-amber-600 uppercase tracking-wider bg-amber-50 inline-block px-2.5 py-1 rounded">
-              半強式效率
+        <!-- Semi-strong form -->
+        <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-700 border border-amber-200">
+                Semi-strong Form
+              </span>
+              <span class="text-xs text-slate-400">實務中最常見的討論模型</span>
             </div>
-            <h3 class="text-xl font-bold text-slate-900">Semi-strong Form Efficiency</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">
+            <h3 class="text-xl font-bold text-slate-900">半強式效率 (Semi-strong)</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
               證券價格反映了所有<strong class="text-slate-900 font-semibold">「公開資訊」</strong>。
             </p>
-            <ul class="text-xs text-slate-500 space-y-1.5 list-disc list-inside pt-2 border-t border-slate-100">
-              <li>涵蓋歷史成交價量、公司財報、新聞公告等。</li>
-              <li>基本面分析與技術面分析皆無法帶來超額報酬。</li>
-              <li>但未公開的內部私有資訊仍可能產生超額利潤。</li>
-            </ul>
+
+            <!-- 包含維度清單 -->
+            <div class="space-y-2 pt-3 border-t border-slate-100 text-xs text-slate-600">
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">✔</span>
+                <span>歷史量價走勢、技術線圖</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">✔</span>
+                <span>公開財報、法人說明會、新聞公告</span>
+              </div>
+              <div class="flex items-center gap-2 text-rose-500 font-medium">
+                <span>✖</span>
+                <span>未公開之董事會決策、機密商業機密（未反映）</span>
+              </div>
+            </div>
           </div>
-          <div class="bg-slate-100 rounded-lg p-3 text-center text-xs text-slate-400 border border-slate-200">
-            [ 圖片示意：公開市場資訊流動 ]
+
+          <div class="bg-amber-50/60 rounded-xl p-4 border border-amber-100 text-xs text-amber-900 leading-relaxed">
+            <strong>核心意涵：</strong> 基本面分析（財務分析）與技術面分析皆無法持續產生超額利潤；但掌握<strong>內部私有資訊者</strong>仍有獲取超額報酬的可能。
           </div>
         </div>
 
-        <!-- 卡片 B: Strong-form -->
-        <div class="bg-white rounded-2xl p-7 border-2 border-indigo-500/20 shadow-sm flex flex-col justify-between space-y-6 relative overflow-hidden">
-          <div class="space-y-3">
-            <div class="text-xs font-semibold text-indigo-600 uppercase tracking-wider bg-indigo-50 inline-block px-2.5 py-1 rounded">
-              強式效率
+        <!-- Strong-form -->
+        <div class="bg-white rounded-2xl p-8 border-2 border-indigo-500/20 shadow-sm flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 rounded-full text-xs font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">
+                Strong-form
+              </span>
+              <span class="text-xs text-slate-400">理論上的極致狀態</span>
             </div>
-            <h3 class="text-xl font-bold text-slate-900">Strong-form Efficiency</h3>
-            <p class="text-slate-600 text-sm leading-relaxed">
+            <h3 class="text-xl font-bold text-slate-900">強式效率 (Strong-form)</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
               證券價格可以完全反映其資訊（<strong class="text-slate-900 font-semibold">公開資訊 + 內部資訊</strong>）。
             </p>
-            <ul class="text-xs text-slate-500 space-y-1.5 list-disc list-inside pt-2 border-t border-slate-100">
-              <li>涵蓋所有公開資料以及任何未公開的公司內部私密資訊。</li>
-              <li>內線交易者也無法在該市場中取得超額報酬。</li>
-              <li>反映最極致理想的定價效率狀態。</li>
-            </ul>
+
+            <!-- 包含維度清單 -->
+            <div class="space-y-2 pt-3 border-t border-slate-100 text-xs text-slate-600">
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">✔</span>
+                <span>所有公開歷史數據與財報公告</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-500 font-bold">✔</span>
+                <span>內部未公開之私密資訊、管理層最新決策</span>
+              </div>
+              <div class="flex items-center gap-2 text-indigo-600 font-medium">
+                <span>🛡</span>
+                <span>連內線交易者也完全無法藉此賺取超額利潤</span>
+              </div>
+            </div>
           </div>
-          <div class="bg-indigo-50/50 rounded-lg p-3 text-center text-xs text-indigo-400 border border-indigo-100">
-            [ 圖片示意：內部資訊與公開資訊整合 ]
+
+          <div class="bg-indigo-50/60 rounded-xl p-4 border border-indigo-100 text-xs text-indigo-900 leading-relaxed">
+            <strong>核心意涵：</strong> 市場如同透明水晶球，資訊壁壘徹底瓦解，任何資訊誕生瞬間即反映在價格中。
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 三、「效率 Four Points」 -->
+    <section class="space-y-6">
+      <div class="flex items-center gap-3">
+        <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-600 text-white font-bold text-sm">03</span>
+        <h2 class="text-2xl font-bold text-slate-900">效率 Four Points（核心思辨與觀察）</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Point 1 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:border-indigo-300 transition space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center">1</span>
+            <h4 class="font-bold text-slate-900 text-base">公開資訊與內部資訊並存</h4>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            市場價格反映公開資訊，但<strong>沒有否認內部資訊的存在</strong>。
+          </p>
+        </div>
+
+        <!-- Point 2 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:border-indigo-300 transition space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center">2</span>
+            <h4 class="font-bold text-slate-900 text-base">真實潛在價值 vs 即時價格反應</h4>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            因為市場價格<strong>只反映公開資訊</strong>，因此無法完全反映隱藏的真實潛在價值。但只要有<strong>任何新資訊被釋出</strong>，市場上的價格會以極快速度產生連鎖反應與重估。
+          </p>
+        </div>
+
+        <!-- Point 3 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:border-indigo-300 transition space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-full bg-amber-100 text-amber-700 font-bold text-xs flex items-center justify-center">3</span>
+            <h4 class="font-bold text-slate-900 text-base">公平遊戲假說（存疑？）</h4>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            理論上，若市場具備完全效率，投資將是一場參與者資訊對等的「公平遊戲（Fair Game）」。
+          </p>
+        </div>
+
+        <!-- Point 4 -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200 shadow-xs hover:border-indigo-300 transition space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center">4</span>
+            <h4 class="font-bold text-slate-900 text-base">價格隨機漫步與未預期事件</h4>
+          </div>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            在市場效率假定下，未來的價格走向是<strong>無法預測的（Random Walk）</strong>；只有發生<strong>「隨機發生的未預期事件」</strong>，才會引發實質的價格跳動。
+          </p>
         </div>
 
       </div>
@@ -122,8 +245,9 @@
   </main>
 
   <!-- 頁尾 -->
-  <footer class="border-t border-slate-200 bg-white py-6 mt-12 text-center text-xs text-slate-400">
-    <p>市場效率研究簡報展示頁面 &bull; 託管於 GitHub Pages</p>
+  <footer class="border-t border-slate-200 bg-white py-8 mt-12 text-center text-xs text-slate-500 space-y-1">
+    <p class="font-medium text-slate-700">財務會計理論報告</p>
+    <p> GitHub Pages &bull; 林峻逸</p>
   </footer>
 
 </body>
